@@ -1,153 +1,153 @@
-///CODICE MORSE
+///MORSE CODE
 
-//FUNZIONI
-void codifica(char t[]);
+//FUNCTIONS
+void coding(char test[]);
 
 int main(void)
 {
-    char testo[100];
+    char text[100];
 
-    //Input testo da codificare
-    printf("Testo: ");
-    scanf("%[^\n]", testo);
+    //Text input to encode
+    printf("Text: ");
+    scanf("%[^\n]", text);
 
-    codifica(testo);
+    coding(text);
     return 0;
 }
 
-//CODIFICA
-void codifica(char test[])
+//CODING
+void coding(char test[])
 {
-    //Stringa codificata
-    char s_c[10000]= "";
+    //Memory location of the encoded string
+    char c_s[10000]= "";
 
-    //Ogni carattere dell' array verrà codificato
+    //Each character of the array will be encoded
     for(unsigned int i=0; test[i] != '\0'; i++){
         test[i] = (char)tolower(test[i]);
         switch(test[i]){
         case 'a':
-            strcat(s_c, ".-");
+            strcat(c_s, ".-");
             break;
         case 'b':
-            strcat(s_c, "-...");
+            strcat(c_s, "-...");
             break;
         case 'c':
-            strcat(s_c, "-.-.");
+            strcat(c_s, "-.-.");
             break;
         case 'd':
-            strcat(s_c, "-..");
+            strcat(c_s, "-..");
             break;
         case 'e':
-            strcat(s_c, ".");
+            strcat(c_s, ".");
             break;
         case 'f':
-            strcat(s_c, "..-.");
+            strcat(c_s, "..-.");
             break;
         case 'g':
-            strcat(s_c, "--.");
+            strcat(c_s, "--.");
             break;
         case 'h':
-            strcat(s_c, "....");
+            strcat(c_s, "....");
             break;
         case 'i':
-            strcat(s_c, "..");
+            strcat(c_s, "..");
             break;
         case 'j':
-            strcat(s_c, ".---");
+            strcat(c_s, ".---");
             break;
         case 'k':
-            strcat(s_c, "-.-");
+            strcat(c_s, "-.-");
             break;
         case 'l':
-            strcat(s_c, ".-..");
+            strcat(c_s, ".-..");
             break;
         case 'm':
-            strcat(s_c, "--");
+            strcat(c_s, "--");
             break;
         case 'n':
-            strcat(s_c, "-.");
+            strcat(c_s, "-.");
             break;
         case 'o':
-            strcat(s_c, "---");
+            strcat(c_s, "---");
             break;
         case 'p':
-            strcat(s_c, ".--.");
+            strcat(c_s, ".--.");
             break;
         case 'q':
-            strcat(s_c, "--.-");
+            strcat(c_s, "--.-");
             break;
         case 'r':
-            strcat(s_c, ".-");
+            strcat(c_s, ".-");
             break;
         case 's':
-            strcat(s_c, "...");
+            strcat(c_s, "...");
             break;
         case 't':
-            strcat(s_c, "-");
+            strcat(c_s, "-");
             break;
         case 'u':
-            strcat(s_c, "..-");
+            strcat(c_s, "..-");
             break;
         case 'v':
-            strcat(s_c, "...-");
+            strcat(c_s, "...-");
             break;
         case 'w':
-            strcat(s_c, ".--");
+            strcat(c_s, ".--");
             break;
         case 'x':
-            strcat(s_c, "-..-");
+            strcat(c_s, "-..-");
             break;
         case 'y':
-            strcat(s_c, "-.--");
+            strcat(c_s, "-.--");
             break;
         case 'z':
-            strcat(s_c, "--..");
+            strcat(c_s, "--..");
             break;
         case '1':
-            strcat(s_c, ".----");
+            strcat(c_s, ".----");
             break;
         case '2':
-            strcat(s_c, "..---");
+            strcat(c_s, "..---");
             break;
         case '3':
-            strcat(s_c, "...--");
+            strcat(c_s, "...--");
             break;
         case '4':
-            strcat(s_c, "....-");
+            strcat(c_s, "....-");
             break;
         case '5':
-            strcat(s_c, ".....");
+            strcat(c_s, ".....");
             break;
         case '6':
-            strcat(s_c, "-....");
+            strcat(c_s, "-....");
             break;
         case '7':
-            strcat(s_c, "--...");
+            strcat(c_s, "--...");
             break;
         case '8':
-            strcat(s_c, "---..");
+            strcat(c_s, "---..");
             break;
         case '9':
-            strcat(s_c, "----.");
+            strcat(c_s, "----.");
             break;
         case '0':
-            strcat(s_c, "-----");
+            strcat(c_s, "-----");
             break;
         case '?':
-            strcat(s_c, "..--..");
+            strcat(c_s, "..--..");
             break;
         case '!':
-            strcat(s_c, "-.-.--");
+            strcat(c_s, "-.-.--");
             break;
         case '.':
-            strcat(s_c, ".-.-.-");
+            strcat(c_s, ".-.-.-");
             break;
         case ',':
-            strcat(s_c, "--..--");
+            strcat(c_s, "--..--");
             break;
         }
-        strcat(s_c, " ");
+        strcat(c_s, " ");
     }
-    printf("\n\nCODIFICA:\n");
-    printf("%s", s_c);
+    printf("\n\nCODING:\n");
+    printf("%s", c_s);
 }
