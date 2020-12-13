@@ -15,13 +15,13 @@ int main(void)
 	char y;
 	
 	do{
-		puts("         PYTHAGOREAN TRIPLET\n");
-		i_c(n);
+puts("         PYTHAGOREAN TRIPLET\n");
+i_c(n);
 
     	p_t_r(n);
 
     	//Repeat sequence entry
-		printf("%s","\n\nTo repeat the sequence enter 'y': ");
+printf("%s","\n\nTo repeat the sequence enter 'y': ");
 		
     	scanf("\n");
     	scanf("%c", &y);
