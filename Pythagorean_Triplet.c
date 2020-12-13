@@ -11,21 +11,23 @@ void p_t_r(double []);  //Pythagorean triple result function
 
 int main(void)
 {
-double n[3];
-char y;
+	double n[3];
+	char y;
+	
+	do{
+		puts("         PYTHAGOREAN TRIPLET\n");
+		i_c(n);
 
-do{
-	puts("         PYTHAGOREAN TRIPLET\n");
-	i_c(n);
+    	p_t_r(n);
 
-    p_t_r(n);
-
-    //Repeat sequence entry
-	printf("%s","\n\nTo repeat the sequence enter 'y': ");
-    scanf("\n");
-    scanf("%c", &y);
-    puts("");
-}while(y == 'y');
+    	//Repeat sequence entry
+		printf("%s","\n\nTo repeat the sequence enter 'y': ");
+		
+    	scanf("\n");
+    	scanf("%c", &y);
+		
+    	puts("");
+	}while(y == 'y');
 
 	return 0;
 }
