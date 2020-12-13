@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 
@@ -41,7 +42,7 @@ void i_c(double arr[])
 			
 			//ends program execution if the input is a character
             if(!scanf("%lf", &arr[i]))
-				return 0;
+				exit(0);
 			
             if(0 == arr[i])
                 controller = 1;
