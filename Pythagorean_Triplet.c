@@ -42,12 +42,12 @@ void i_c(double arr[])
         for(unsigned int i = 0; i < 3; i++){
             printf("N%d: ", i+1);
 			
-			  //ends program execution if the input is a character
-        if(!scanf("%lf", &arr[i]))
-				    exit(0);
+			//ends program execution if the input is a character
+            if(!scanf("%lf", &arr[i]))
+		    	exit(0);
 			
-        if(0 == arr[i])
-            controller = 1;
+       		if(0 == arr[i])
+            	controller = 1;
         }
 	}while(1 == controller);
 }
@@ -58,7 +58,7 @@ void p_t_r(double arr[])
     double hyp=0, cat=0;
     // Pythagorean triple function (decides which number is greater (hypotenuse) and which minor (catheti))
     for(unsigned int i = 0; i < 3; i++){
-          for(unsigned int x = 0; x < 3; x++){
+    	for(unsigned int x = 0; x < 3; x++){
               if(arr[i] > arr[x]){
                   if(arr[i] > hyp)
                       hyp = arr[i];
