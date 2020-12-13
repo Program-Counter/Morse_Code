@@ -3,7 +3,6 @@
 
 
 ///TERNA PITAGORICA
-///Programma di Antonino Calabrese 4AI
 
 //Prototipi funzione
 void i_c(double []);  //Funzione di input e controllo --> i_c
