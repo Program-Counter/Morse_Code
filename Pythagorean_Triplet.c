@@ -2,11 +2,11 @@
 #include <math.h>
 
 
-///TERNA PITAGORICA
+///PYTHAGOREAN TRIPLET
 
-//Prototipi funzione
-void i_c(double []);  //Funzione di input e controllo --> i_c
-void r_t_p(double []);  //Funzione risultato terna pitagorica
+//Prototypes functions
+void i_c(double []);  //Input and control function -> i_c
+void p_t_r(double []);  //Pythagorean triple result function
 
 int main(void)
 {
@@ -14,12 +14,13 @@ int main(void)
 	char y;
 
 	do{
-        puts("         TERNA PITAGORICA\n");
-        i_c(n);
+		puts("         PYTHAGOREAN TRIPLET\n");
+		i_c(n);
 
-        r_t_p(n);
+        p_t_r(n);
 
-        printf("%s","\n\nPer ripetere la sequenza inserire 'y': ");
+        //Repeat sequence entry
+		printf("%s","\n\nTo repeat the sequence enter 'y': ");
         scanf("\n");
         scanf("%c", &y);
         puts("");
@@ -28,45 +29,48 @@ int main(void)
 	return 0;
 }
 
-//Funzione di input e controllo --> i_c
-void i_c(double vet[])
+//Input and control function -> i_c
+void i_c(double arr[])
 {
-    _Bool g;
+    _Bool controller;
     do{
-        g = 0;
+        controller = 0;
 
         for(unsigned int i = 0; i < 3; i++){
             printf("N%d: ", i+1);
-            scanf("%lf", &vet[i]);
-            if(0 == vet[i]){
-                g = 1;
-            }
+			
+			//ends program execution if the input is a character
+            if(!scanf("%lf", &arr[i]))
+				return 0;
+			
+            if(0 == arr[i])
+                controller = 1;
         }
-	}while(1 == g);
+	}while(1 == controller);
 }
 
-//Funzione risultato terna pitagoric
-void r_t_p(double vet[])
+//Pythagorean triple result function
+void p_t_r(double arr[])
 {
-    double ipo=0, cat=0;
-    //Funzione terna pitagorica (decide quale numero è maggiore (ipotenusa) e quali minori (cateti))
+    double hyp=0, cat=0;
+    // Pythagorean triple function (decides which number is greater (hypotenuse) and which minor (catheti))
 	for(unsigned int i = 0; i < 3; i++){
         for(unsigned int x = 0; x < 3; x++){
-            if(vet[i] > vet[x]){
-                if(vet[i] > ipo)
-                    ipo = vet[i];
+            if(arr[i] > arr[x]){
+                if(arr[i] > hyp)
+                    hyp = arr[i];
             }
         }
 	}
 
 	for(unsigned int i= 0; i < 3; i++){
-        if(vet[i] != ipo)
-            cat += pow(vet[i],2);
+        if(arr[i] != hyp)
+            cat += pow(arr[i],2);
 	}
 
-    ipo = pow(ipo,2);
-	if(ipo == cat)
-		puts("\nE' una terna pitagorica !");
+    hyp = pow(hyp,2);
+	if(hyp == cat)
+		puts("\nIt's a Pythagorean triple !");
 	else
-	    puts("\nNon e' una terna pitagorica !");
+	    puts("\nIt is not a Pythagorean triple !");
 }
